@@ -1,6 +1,6 @@
 <template>
-  <section id="intro" class="flex justify-center items-center h-screen text-white">
-    <div class="grid grid-cols-2 place-items-center gap-10 px-40 mt-[80px]">
+  <section id="intro" class="first-section flex justify-center items-center h-screen text-white">
+    <div class="first-section-div grid grid-cols-2 place-items-center gap-10 px-40 mt-[80px]">
       <NuxtImg class="h-[700px] rounded-[40px] col-6" src="/bryanphoto.svg" />
       <div class="col-6 w-[80%] text-justify text-[25px]">
         Welcome to my portfolio! I'm Bryan Arnoco, a full-stack developer constantly expanding my skill set to include
@@ -18,7 +18,36 @@
 </template>
 
 <style>
+.first-section {
+  animation: background-black linear forwards;
+  animation-timeline: view();
+  animation-range: exit;
+}
 
+.first-section-div {
+  animation: opacity-zero linear forwards;
+  animation-timeline: view();
+  animation-range: exit;
+}
+
+@keyframes background-black {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@keyframes opacity-zero {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+  
+}
 
 .image {
   -webkit-filter: grayscale(0%);

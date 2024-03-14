@@ -3,7 +3,7 @@
     <div class="flex flex-col gap-10">
       <div class="uppercase text-center text-[50px] text-white font-medium">Projects</div>
       <div class="grid grid-cols-3 gap-10">
-        <div v-for="item in 6" class="group relative block bg-black rounded-[20px] h-[300px] w-[300px]">
+        <div v-for="item in 6" class="group relative block bg-black rounded-[20px] h-[300px] w-[300px] border-2 border-slate-400 shadow-white shadow-lg" >
           <NuxtImg alt="" src="/jeepneys.jpg"
             class="absolute rounded-[20px] inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50" />
 
@@ -25,6 +25,20 @@
 
 <style>
 .third-section {
-  background-color:rgb(32, 31, 31)c;
+  background-color: rgba(0, 0, 0, 0.7);
+  animation: background-black-exit linear forwards;
+  animation-timeline: view();
+  animation-range: exit;
 }
+
+@keyframes background-black-exit {
+  from {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+
 </style>

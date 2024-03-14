@@ -1,19 +1,25 @@
 <template>
-  <div class="first-section">
+  <div class="bg">
     <Header />
-    <SectionsFirstSection />
-    <SectionsSecondSection />
-    <SectionsThirdSection />
+    <div class="relative">
+      <SectionsFirstSection />
+      <SectionsSecondSection />
+      <SectionsThirdSection />
+      <SectionsFourthSection />
+    </div>
+
+
   </div>
 </template>
 
 <style>
-.first-section {
+.bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)), url(/bryanbackground.svg);
   ;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 </style>
