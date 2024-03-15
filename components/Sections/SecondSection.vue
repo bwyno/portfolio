@@ -1,6 +1,6 @@
 <template>
-  <section id="tech-stack" class="flex py-40 justify-center second-section h-screen text-white">
-    <div class="flex flex-col gap-20 sec-inside">
+  <section id="tech-stack" class="absolute flex justify-center second-section text-white">
+    <div class="second-section-div flex flex-col gap-20 my-40">
       <div class="uppercase text-center text-[50px] font-medium">
         Tech Stack
       </div>
@@ -124,20 +124,87 @@ const getTech = (item: Item) => {
 <style>
 .second-section {
   background-color: rgba(0, 0, 0, 0.7);
-  animation: fade-in linear forwards;
-  animation-timeline: view();
-  animation-range: entry ;
+  height: 10vh;
+  border: 1px solid;
+  width: 10vw;
+  bottom: 0;
+  right: 0;
+  animation: increase-2 linear forwards;
+  animation-timeline: scroll(y);
+  animation-range: 310vh 610vh;
+  transform: translate(-90%, -90%) skew(-45deg);
+  z-index: 5;
+}
+.second-section-div {
+  scale: 0 0;
+  animation: scale-animation-2 linear forwards;
+  animation-timeline: scroll(y);
+  animation-range: 310vh 610vh;
 }
 
-@keyframes fade-in {
-  from {
+@keyframes increase-2 {
+  0% {
+    width: 10vw;
+    height: 10vh;
+    transform: translate(-90%, -90%) skew(-45deg);
+  }
+
+  39% {
+    width: 100vw;
+    height: 100vh;
+    transform: translate(0, 0) skew(0deg);
+    border: 1px solid;
+  }
+  40% {
+    width: 100vw;
+    height: 100vh;
+    transform: translate(0, 0) skew(0deg);
+    border: 0;
+  }
+
+  60% {
+    width: 100vw;
+    height: 100vh;
+    transform: translate(0, 0) skew(0deg);
+    opacity: 1;
+    border: 1px solid;
+  }
+
+  90% {
+    top: 0;
+    left: 0;
+    width: 10vw;
+    height: 10vh;
+    transform: translate(0, 0) skew(60deg);
+    opacity: 0.1;
+  }
+
+  100% {
     opacity: 0;
   }
-  to {
-    opacity: 1;
+}
+
+@keyframes scale-animation-2 {
+  0% {
+    scale: 0 0;
+  }
+
+  40% {
+    scale: 1 1;
+  }
+
+  60% {
+    scale: 1 1;
+  }
+
+  90% {
+    scale: 0 0;
+  }
+
+  100% {
+    scale: 0 0;
   }
 }
-/*   */
 
 .scroller {
   -webkit-mask: linear-gradient(90deg,

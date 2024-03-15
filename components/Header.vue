@@ -7,7 +7,7 @@
           </div>
         </div>
       </div>
-      <nav class="absolute w-full flex justify-center items-center h-full gap-[100px] text-white z-20">
+      <!-- <nav class="absolute w-full flex justify-center items-center h-full gap-[100px] text-white z-20">
         <div class="w-[120px] flex justify-center items-center">
           <NuxtLink to="/#intro"
             class="text-[18px] hover:text-green-500 font-medium transition ease-in-out delay-150 hover:scale-110 duration-300 hover:-translate-y-1">
@@ -26,7 +26,7 @@
             Projects
           </NuxtLink>
         </div>
-      </nav>
+      </nav> -->
     </div>
 
   </header>

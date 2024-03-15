@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --sec-1: 0%;
+  --sec-2: 10%;
+  --sec-3: 20%;
+}
